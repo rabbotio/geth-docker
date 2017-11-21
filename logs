@@ -1,0 +1,1 @@
+cat $(docker inspect --format='{{.LogPath}}' eth)

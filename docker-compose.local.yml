@@ -1,0 +1,29 @@
+version: '2'
+services:
+  eth:
+    privileged: true
+    build: monitored-geth-client
+    restart: on-failure
+    container_name: eth    
+    links:
+      - netstats
+    entrypoint: /root/start.sh
+    volumes:
+      # - /etc/localtime:/etc/localtime:ro
+      - ./src:/src:ro
+      - ./.ethereum:/root/.ethereum:rw
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "30304:30304/udp"
+  netstats:
+    build: eth-netstats
+    restart: on-failure
+    container_name: netstats
+    environment:
+      - WS_SECRET=eth-net-stats-secret
+    #volumes:
+    #  - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
