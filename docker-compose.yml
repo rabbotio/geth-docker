@@ -11,7 +11,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./src:/src:ro
-      - ./.ethereum:/root/.ethereum:rw
+      - /mnt/eth-sgp1-01/.ethereum:/root/.ethereum:rw
     ports:
       - "8545:8545"
       - "30303:30303"
