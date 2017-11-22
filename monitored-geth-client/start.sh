@@ -12,4 +12,4 @@ ntpd -s -v
 echo "[ntpd] Sync system clock..."
 sleep 3
 
-geth --fast --cache=512 --rpc --rpccorsdomain="*"
+geth $@

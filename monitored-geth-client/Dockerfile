@@ -11,4 +11,5 @@ ADD start.sh /root/start.sh
 ADD app.json /root/eth-net-intelligence-api/app.json
 RUN chmod +x /root/start.sh
 
+EXPOSE 8545 8546 30303 30303/udp 30304/udp
 ENTRYPOINT /root/start.sh

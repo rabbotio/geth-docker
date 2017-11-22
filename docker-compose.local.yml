@@ -8,6 +8,7 @@ services:
     links:
       - netstats
     entrypoint: /root/start.sh
+    command: '--syncmode "fast" --cache=512 --rpc --rpccorsdomain="*" --rpcapi "eth,web3" --rpcaddr="0.0.0.0"'
     volumes:
       # - /etc/localtime:/etc/localtime:ro
       - ./src:/src:ro

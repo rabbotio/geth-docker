@@ -4,10 +4,11 @@ services:
     privileged: true
     build: monitored-geth-client
     restart: on-failure
-    container_name: eth    
+    container_name: eth
     links:
       - netstats
     entrypoint: /root/start.sh
+    command: '--syncmode "fast" --cache=512 --rpc --rpccorsdomain="*" --rpcapi "eth,web3" --rpcaddr="127.0.0.1"'
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./src:/src:ro
