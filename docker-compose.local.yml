@@ -14,6 +14,7 @@ services:
       - ./.ethereum:/root/.ethereum:rw
     ports:
       - "8545:8545"
+      - "8546:8546"
       - "30303:30303"
       - "30303:30303/udp"
       - "30304:30304/udp"
