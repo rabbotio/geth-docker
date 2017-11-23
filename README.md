@@ -29,8 +29,8 @@ geth with netstats via docker compose
 # To exec
 . exec
 
-# To see docker logs
-. logs
+# To see docker logs https://docs.docker.com/compose/reference/logs/
+. logs -f
 
 # To getting in
 . in
@@ -43,7 +43,7 @@ geth with netstats via docker compose
 - [ ] Custom command from `.env`.
 - [x] test JSON-RPC.
 - [x] test JSON-RPC from external.
-- [ ] Test load script.
+- [x] Test load script.
 - [ ] Try rsync chain data.
 - [ ] Custom port from `.env`.
 - [ ] Docker Compose logs rotate.
