@@ -4,7 +4,7 @@ geth with netstats via docker compose
 # Gotcha
 - You'll need full sync and setup `coinbase` account to start mining.
 
-# To run local
+# To run
 ```shell
 # At local macOS
 . up-local
