@@ -1,10 +1,10 @@
 # geth-docker
 geth with netstats via docker compose
 
-# Gotcha
+## Gotcha
 - You'll need full sync and setup `coinbase` account to start mining.
 
-# To run
+## To run
 ```shell
 # At local macOS
 . up-local
@@ -13,12 +13,12 @@ geth with netstats via docker compose
 . up
 ```
 
-# To bring it down
+## To bring it down
 ```shell
 . down
 ```
 
-# To run
+## To run
 ```shell
 # To run geth inside Docker
 . geth
@@ -39,7 +39,7 @@ geth with netstats via docker compose
 . load ./src/getBalances.js
 ```
 
-# TODO
+## TODO
 - [ ] Custom command from `.env`.
 - [x] test JSON-RPC.
 - [x] test JSON-RPC from external.
